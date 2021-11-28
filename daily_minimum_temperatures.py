@@ -76,7 +76,6 @@ print(years)
 groups = series.groupby(Grouper(freq = "A" ))
 years = concat([DataFrame(x[1].values) for x in groups ] , axis = 1)
 years.columns = range(1981, 1991)
-print(years)
 
 
 years.plot(subplots = True, legend = False)
@@ -139,3 +138,4 @@ plt.show()
 #autocorelation method 2
 plot_acf(series)
 plt.show()
+
