@@ -35,7 +35,7 @@ print(rmse)
 
 b = 10
 new_train = [train[i] for i in range(len(train))]
-my_coef = list()
+my_prediction = list()
 for i in range (b):
     yhat = coef[0]
     length = len(new_train)
@@ -43,9 +43,9 @@ for i in range (b):
     print(len(lags))
     for j in range(window):
          yhat += coef[j + 1] * lags[- j - 1]
-    my_coef.append(yhat)
+    my_prediction.append(yhat)
     new_train.append(yhat)
-print(my_coef)
+print(my_prediction)
 
-predictions2 = model_fit.predict(start=len(train), end=len(train)+len(test) + 10, dynamic=False)
+predictions2 = model_fit.predict(start=len(train), end=len(train) + 10, dynamic=False)
 print(predictions2)
