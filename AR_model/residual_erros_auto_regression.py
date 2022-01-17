@@ -34,7 +34,7 @@ for i in range (len(test_predicted)):
 
 
 print(predictions)
-#forecast = list()
+#b is the number of days we want to predict
 b = 5
 for i in range(b):
     yhat = coef[0]
