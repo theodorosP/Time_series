@@ -53,12 +53,12 @@ def evaluate_models(dataset, p_values, d_values, q_values):
                     print("ARIMA:", order, ", rmse:%.3f " %rmse)
                 else:
                      print("ARIMA:", order, ", rmse:%.3f " %rmse, " > ",  best_score , "which is for: ", best_cfg)
-    print("Best ARIMA%s RMSE=%.3f" % (best_cfg, rmse) )                    
+    print("Best ARIMA%s RMSE=%.3f" % (best_cfg, best_score) )                    
 
 
-p_values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-d_values = [0, 1, 2, 3]
-q_values = [0, 1, 2, 3]
+p_values = [0, 1, 2]
+d_values = [0, 1]
+q_values = [0, 1]
 warnings.filterwarnings("ignore")
 evaluate_models(series, p_values, d_values, q_values)
 
