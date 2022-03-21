@@ -1,6 +1,3 @@
-from cgi import test
-from email import header
-from imghdr import tests
 import pandas as pd
 from math import sqrt, exp, log
 from sklearn.metrics import mean_squared_error
